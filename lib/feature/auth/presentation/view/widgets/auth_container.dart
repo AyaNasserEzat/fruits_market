@@ -3,15 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 
 class AuthContainer extends StatelessWidget {
-  final Widget child;
-  final EdgeInsetsGeometry? padding;
-
   const AuthContainer({
     super.key,
     required this.child,
+    this.color = AppColors.white,
     this.padding = const EdgeInsets.only(left: 16),
   });
+  final Widget child;
+  final EdgeInsetsGeometry? padding;
 
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,13 +20,8 @@ class AuthContainer extends StatelessWidget {
       padding: padding,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(28),
-        color: AppColors.white,
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 2,
-            color: Colors.black12,
-          ),
-        ],
+        color: color,
+        boxShadow: [BoxShadow(blurRadius: 2, color: Colors.black12)],
       ),
       child: child,
     );

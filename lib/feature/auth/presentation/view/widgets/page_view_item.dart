@@ -5,8 +5,7 @@ import 'package:fruits_market/core/utils/app_strings.dart';
 import 'package:fruits_market/core/utils/app_text_style.dart';
 import 'package:fruits_market/core/widgets/custom_button.dart';
 import 'package:fruits_market/feature/auth/data/models/on_bording_model.dart';
-import 'package:fruits_market/feature/auth/presentation/view/login_view.dart';
-import 'package:fruits_market/feature/auth/presentation/view/sign_in_with_diffrent_ways_view.dart';
+import 'package:fruits_market/feature/auth/presentation/view/sign_in_option_view.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/custom_indicator.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -52,7 +51,7 @@ class PageViewItem extends StatelessWidget {
           width: 200.w,
           onpressed: () {
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-              return SignInWithDiffrentWaysView();
+              return SignInOptionView();
             }));
           },
           text: 'Get Started',
