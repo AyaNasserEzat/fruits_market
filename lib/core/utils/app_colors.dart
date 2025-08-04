@@ -1,8 +1,13 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class AppColors {
   static const Color splashBackground = Color(0xff003602);
   static const Color white = Color(0xffFFFFFF);
   static const Color grey = Color(0xff78787C);
   static const Color primaryColor = Color(0xff204F38);
+  static const Color red = Colors.red;
+  static const Color black = Colors.black;
+  static const Color lightGrey = Color(0xffE4E4E4);
+  static const Color blue = Color(0xff004D8E);
+  //004D8E
 }

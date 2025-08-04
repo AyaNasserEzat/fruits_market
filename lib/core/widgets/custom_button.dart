@@ -8,15 +8,16 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.onpressed,
     required this.text,
-    this.color = AppColors.primaryColor,
+    this.color = AppColors.primaryColor,this.width=double.infinity,
   });
   final VoidCallback onpressed;
   final Color? color;
   final String text;
+  final double width;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 200.w,
+      width: width,
       height: 70.h,
       child: ElevatedButton(
         onPressed: onpressed,

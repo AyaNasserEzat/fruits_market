@@ -9,4 +9,5 @@ class AppStrings {
       "Explore organic fruits & grap them3";
 
   static const String skip = "Skip";
+  static const String appName = "Fruit Market";
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_market/core/helpers/cache_helper.dart';
 import 'package:fruits_market/core/services/service_locatore.dart';
+import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/feature/auth/presentation/view/splash_view.dart';
 
 Future<void> main() async {
@@ -23,6 +24,12 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            scaffoldBackgroundColor: AppColors.white,
+            appBarTheme: AppBarTheme(
+              color: AppColors.white
+            )
+          ),
           home: SplashView(),
         );
       },
