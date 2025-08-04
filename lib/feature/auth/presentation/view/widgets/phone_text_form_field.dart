@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 
 class PhoneTextFormField extends StatefulWidget {
-  PhoneTextFormField({super.key});
+  PhoneTextFormField({super.key,required this.hintText});
   List<String> c = ["KW", "eg"];
   String selectedCode = "KW";
+  String? hintText;
   @override
   State<PhoneTextFormField> createState() => _PhoneTextFormField();
 }
@@ -22,7 +23,7 @@ class _PhoneTextFormField extends State<PhoneTextFormField> {
       child: Row(
         children: [
           PopupMenuButton<String>(
-            icon: Icon(Icons.keyboard_arrow_down, size: 30, color: AppColors.grey),
+            icon: Icon(Icons.keyboard_arrow_down, size: 32, color: AppColors.grey),
             onSelected: (String newValue) {
               setState(() {
                 widget.selectedCode = newValue;
@@ -44,9 +45,9 @@ class _PhoneTextFormField extends State<PhoneTextFormField> {
             child: TextField(
               controller: TextEditingController(),
               keyboardType: TextInputType.phone,
-              decoration: const InputDecoration(
+              decoration:  InputDecoration(
                 border: InputBorder.none,
-                hintText: 'Phone Number',
+                hintText: widget.hintText,
               ),
             ),
           ),
