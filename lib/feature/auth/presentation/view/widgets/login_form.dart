@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_market/core/widgets/custom_button.dart';
+import 'package:fruits_market/feature/auth/presentation/view/sign_up_view.dart';
+import 'package:fruits_market/feature/auth/presentation/view/widgets/auth_navigation_text.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/custom_text_form_field.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/custom_text_rich.dart';
-import 'package:fruits_market/feature/auth/presentation/view/widgets/dont_have_acount_widget.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/forget_password_text_bytton.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/phone_text_form_field.dart';
 
@@ -17,7 +18,7 @@ class LoginForm extends StatelessWidget {
       children: [
         CustomTextRich(text: 'Phone Number '),
         SizedBox(height: 8.h),
-        PhoneTextFormField(hintText: 'Phone Number',),
+        PhoneTextFormField(hintText: 'Phone Number'),
         SizedBox(height: 21.h),
         CustomTextRich(text: 'Password '),
         SizedBox(height: 8.h),
@@ -27,7 +28,11 @@ class LoginForm extends StatelessWidget {
         SizedBox(height: 21.h),
         CustomButton(onpressed: () {}, text: 'Login'),
         SizedBox(height: 35.h),
-        DontHaveAcountWidget(),
+        AuthNavigationText(
+          prefixText: 'Dont have an account? |',
+          actionText: 'Sign Up',
+          widget: SignUpView(),
+        ),
       ],
     );
   }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_market/core/widgets/custom_button.dart';
-import 'package:fruits_market/feature/auth/presentation/view/widgets/already_have_count_widget.dart';
+import 'package:fruits_market/feature/auth/presentation/view/login_view.dart';
+import 'package:fruits_market/feature/auth/presentation/view/widgets/auth_navigation_text.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/custom_text_form_field.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/custom_text_rich.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/phone_text_form_field.dart';
@@ -28,7 +29,11 @@ class SignUpForm extends StatelessWidget {
         SizedBox(height: 41.h),
         CustomButton(onpressed: () {}, text: 'Sign Up'),
         SizedBox(height: 39.h),
-        AlreadyHaveCountWidget(),
+        AuthNavigationText(
+          prefixText: 'Aleardy have an account? |',
+          actionText: 'Login',
+          widget: LoginView(),
+        ),
       ],
     );
   }
