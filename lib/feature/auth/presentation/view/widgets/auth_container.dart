@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 
 class AuthContainer extends StatelessWidget {
@@ -14,6 +15,7 @@ class AuthContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 75.h,
       padding: padding,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(28),

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_market/core/utils/app_strings.dart';
 import 'package:fruits_market/core/utils/app_text_style.dart';
+import 'package:fruits_market/feature/auth/presentation/view/login_view.dart';
+import 'package:fruits_market/feature/auth/presentation/view/widgets/auth_container.dart';
+import 'package:fruits_market/feature/auth/presentation/view/widgets/auth_navigation_text.dart';
 
 class SignInWithDiffrentWaysView extends StatelessWidget {
   const SignInWithDiffrentWaysView({super.key});
@@ -19,7 +22,44 @@ class SignInWithDiffrentWaysView extends StatelessWidget {
               SizedBox(height: 21.h),
               Text("Welcome To Our App", style: AppTextStyle.segoeUIBold),
               SizedBox(height: 28.h),
-          
+              AuthContainer(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('assets/images/phone_icon.png'),
+                    SizedBox(width: 10.w),
+                    Text('Sign in with Phone Number'),
+                  ],
+                ),
+              ),
+              SizedBox(height: 21.h),
+              AuthContainer(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('assets/images/googl_icon.png'),
+                    SizedBox(width: 10.w),
+                    Text('Sign in with Google '),
+                  ],
+                ),
+              ),
+              SizedBox(height: 21.h),
+              AuthContainer(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('assets/images/facbook_icon.png'),
+                    SizedBox(width: 10.w),
+                    Text('Sign in with facbook Number'),
+                  ],
+                ),
+              ),
+              SizedBox(height: 90.h),
+              AuthNavigationText(
+                prefixText: 'Aleardy member? ',
+                actionText: 'Sign In',
+                widget: LoginView(),
+              ),
             ],
           ),
         ),
