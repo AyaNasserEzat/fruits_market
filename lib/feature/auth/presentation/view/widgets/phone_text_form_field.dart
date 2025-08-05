@@ -18,7 +18,7 @@ class _PhoneTextFormField extends State<PhoneTextFormField> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(28),
         color: AppColors.white,
-        boxShadow: [BoxShadow(blurRadius: 2, color: Colors.black12)],
+        boxShadow: [BoxShadow(blurRadius: 2, color: AppColors.greyShaded500)],
       ),
       child: Row(
         children: [

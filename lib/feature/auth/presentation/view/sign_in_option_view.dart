@@ -54,21 +54,37 @@ class SignInOptionView extends StatelessWidget {
               AuthNavigationText(
                 prefixText: 'Already member? ',
                 actionText: 'Sign In',
-                widget: LoginView(),
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => LoginView()),
+                  );
+                },
               ),
               SizedBox(height: 58.h),
-              
+
               AuthNavigationText(
                 prefixText: 'By continuo you agree to our',
                 prefixTextcolor: AppColors.grey,
                 actionText: 'Terms of service',
-                widget: TermsOfPrivacyView(),
+                //widget: TermsOfPrivacyView(),
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => TermsOfPrivacyView()),
+                  );
+                },
               ),
               AuthNavigationText(
                 prefixText: 'and our',
                 prefixTextcolor: AppColors.grey,
                 actionText: 'Privacy Policy',
-                widget: TermsOfPrivacyView(),
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => TermsOfPrivacyView()),
+                  );
+                },
               ),
             ],
           ),

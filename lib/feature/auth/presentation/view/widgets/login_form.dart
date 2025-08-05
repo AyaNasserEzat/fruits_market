@@ -31,7 +31,12 @@ class LoginForm extends StatelessWidget {
         AuthNavigationText(
           prefixText: 'Dont have an account? |',
           actionText: 'Sign Up',
-          widget: SignUpView(),
+          onTap: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (_) => SignUpView()),
+            );
+          },
         ),
       ],
     );

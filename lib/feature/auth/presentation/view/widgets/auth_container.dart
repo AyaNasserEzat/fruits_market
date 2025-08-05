@@ -21,7 +21,7 @@ class AuthContainer extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(28),
         color: color,
-        boxShadow: [BoxShadow(blurRadius: 2, color: Colors.black12)],
+        boxShadow: [BoxShadow(blurRadius: 2, color: AppColors.greyShaded500)],
       ),
       child: child,
     );

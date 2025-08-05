@@ -8,13 +8,13 @@ class AuthNavigationText extends StatelessWidget {
     super.key,
     required this.prefixText,
     required this.actionText,
-    required this.widget,
+    required this.onTap,
     this.prefixTextcolor = AppColors.black,
   });
   final String prefixText;
   final Color? prefixTextcolor;
   final String actionText;
-  final Widget widget;
+final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -38,12 +38,7 @@ class AuthNavigationText extends StatelessWidget {
                       ),
               recognizer:
                   TapGestureRecognizer()
-                    ..onTap = () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (_) => widget),
-                      );
-                    },
+                    ..onTap = onTap
             ),
           ],
         ),

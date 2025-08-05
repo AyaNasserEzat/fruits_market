@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_market/core/widgets/custom_button.dart';
+import 'package:fruits_market/feature/auth/presentation/view/otp_view.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/custom_text_rich.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/phone_text_form_field.dart';
 
@@ -19,7 +20,12 @@ class SignInWithPhoneForm extends StatelessWidget {
          SizedBox(height: 8.h),
             PhoneTextFormField(hintText: 'Phone Number'),
               SizedBox(height: 48.h),
-              CustomButton(onpressed: (){}, text: 'Submit')
+              CustomButton(onpressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => OtpView()),
+                  );
+                }, text: 'Submit')
       ],
     );
   }
