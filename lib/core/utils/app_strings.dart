@@ -18,7 +18,12 @@ static const String signUpTitle = "Sign Up to Wikala";
   static const String loginRedirect = "Already have an account?";
     static const String login = "Login";
   static const String forgetPassword = 'Forget Password?';
-  
+
+  static const String home = 'home';
+  static const String order = 'Orders';
+  static const String bassket = 'Bassket';
+   static const String more = 'more';
+
   static const String skip = "Skip";
   static const String appName = "Fruit Market";
   static const String myOrder = 'My Order';
