@@ -4,6 +4,7 @@ import 'package:fruits_market/core/helpers/cache_helper.dart';
 import 'package:fruits_market/core/services/service_locatore.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/feature/auth/presentation/view/splash_view.dart';
+import 'package:fruits_market/feature/profile%20copy/presentation/views/profile_view.dart';
 
 Future<void> main() async {
    WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
               color: AppColors.white
             )
           ),
-          home: SplashView(),
+          home: ProfileView(),
         );
       },
     );

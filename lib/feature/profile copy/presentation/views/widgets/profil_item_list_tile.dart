@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruits_market/core/utils/app_colors.dart';
+import 'package:fruits_market/core/utils/app_text_style.dart';
+
+class ProfileItemListTile extends StatelessWidget {
+  const ProfileItemListTile({
+    super.key,required this.imageurl,required this.title,required this.onPressed
+  });
+  final String imageurl;
+final String title;
+final  void Function()? onPressed;
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading:SvgPicture.asset(imageurl,width: 30.w,height: 35.h,) ,
+      title: Text(title,style: AppTextStyle.arialRegular.copyWith(color: AppColors.black),),
+      trailing: IconButton(icon: Icon( Icons.arrow_forward_ios,color: AppColors.grey,size: 15,),onPressed:onPressed ,),
+    );
+  }
+}
