@@ -17,7 +17,8 @@ class SignInOptionWidget extends StatelessWidget {
   final Color? color;
   @override
   Widget build(BuildContext context) {
-        final isDark = ThemeData.estimateBrightnessForColor(color!) == Brightness.dark;
+    final isDark =
+        ThemeData.estimateBrightnessForColor(color!) == Brightness.dark;
     final textColor = isDark ? Colors.white : AppColors.black;
     return GestureDetector(
       onTap: onTap,
@@ -25,10 +26,17 @@ class SignInOptionWidget extends StatelessWidget {
         color: color,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Image.asset(iconPath), SizedBox(width: 10.w), Text(text,style: TextStyle(
-            color: textColor
-            //color!=AppColors.white?AppColors.white:AppColors.black
-          ),)],
+          children: [
+            Image.asset(iconPath),
+            SizedBox(width: 10.w),
+            Text(
+              text,
+              style: TextStyle(
+                color: textColor,
+                //color!=AppColors.white?AppColors.white:AppColors.black
+              ),
+            ),
+          ],
         ),
       ),
     );

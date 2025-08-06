@@ -67,7 +67,6 @@ class SignInOptionView extends StatelessWidget {
                 prefixText: 'By continuo you agree to our',
                 prefixTextcolor: AppColors.grey,
                 actionText: 'Terms of service',
-                //widget: TermsOfPrivacyView(),
                 onTap: () {
                   Navigator.pushReplacement(
                     context,

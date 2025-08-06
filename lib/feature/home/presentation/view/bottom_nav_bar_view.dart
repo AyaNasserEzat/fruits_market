@@ -5,7 +5,7 @@ import 'package:fruits_market/core/utils/app_assets.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/core/utils/app_strings.dart';
 import 'package:fruits_market/feature/home/presentation/view/home_view.dart';
-import 'package:fruits_market/feature/profile%20copy/presentation/views/profile_view.dart';
+import 'package:fruits_market/feature/profile/presentation/views/profile_view.dart';
 
 class BottomNavBarView extends StatefulWidget {
   BottomNavBarView({super.key});

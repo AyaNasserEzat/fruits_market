@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/core/utils/app_text_style.dart';
 import 'package:fruits_market/core/widgets/custom_arrow_back_icon.dart';
-import 'package:fruits_market/feature/profile%20copy/presentation/views/widgets/update_profile_form.dart';
+import 'package:fruits_market/feature/profile/presentation/views/widgets/update_profile_form.dart';
 
 class UpdateProfileView extends StatelessWidget {
   const UpdateProfileView({super.key});

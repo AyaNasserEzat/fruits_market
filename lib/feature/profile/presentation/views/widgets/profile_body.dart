@@ -4,10 +4,13 @@ import 'package:fruits_market/core/utils/app_assets.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/core/utils/app_strings.dart';
 import 'package:fruits_market/core/utils/app_text_style.dart';
+import 'package:fruits_market/core/utils/commans.dart';
 import 'package:fruits_market/core/widgets/custom_button.dart';
-import 'package:fruits_market/feature/profile%20copy/presentation/views/update_profile_view.dart';
-import 'package:fruits_market/feature/profile%20copy/presentation/views/widgets/profil_item_list_tile.dart';
-import 'package:fruits_market/feature/profile%20copy/presentation/views/widgets/profile_image.dart';
+import 'package:fruits_market/feature/profile/presentation/views/about_us_view.dart';
+import 'package:fruits_market/feature/profile/presentation/views/terms_of_privacy_view.dart';
+import 'package:fruits_market/feature/profile/presentation/views/update_profile_view.dart';
+import 'package:fruits_market/feature/profile/presentation/views/widgets/profil_item_list_tile.dart';
+import 'package:fruits_market/feature/profile/presentation/views/widgets/profile_image.dart';
 
 class ProfileBody extends StatelessWidget {
   const ProfileBody({super.key});
@@ -34,9 +37,7 @@ class ProfileBody extends StatelessWidget {
               imageurl: AppAssets.profile,
               title: AppStrings.profile,
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return UpdateProfileView();
-                }));
+               navigatPush(context, UpdateProfileView());
               },
             ),
             ProfileItemListTile(
@@ -62,12 +63,16 @@ class ProfileBody extends StatelessWidget {
             ProfileItemListTile(
               imageurl: AppAssets.terms,
               title: AppStrings.terms,
-              onPressed: () {},
+              onPressed: () {
+                navigatPush(context, TermsOfPrivacyView());
+              },
             ),
             ProfileItemListTile(
               imageurl: AppAssets.about,
               title: AppStrings.aboutUs,
-              onPressed: () {},
+              onPressed: () {
+                navigatPush(context, AboutUsView());
+              },
             ),
           ],
         ),

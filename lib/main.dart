@@ -5,7 +5,7 @@ import 'package:fruits_market/core/services/service_locatore.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/feature/auth/presentation/view/splash_view.dart';
 import 'package:fruits_market/feature/home/presentation/view/bottom_nav_bar_view.dart';
-import 'package:fruits_market/feature/profile%20copy/presentation/views/profile_view.dart';
+import 'package:fruits_market/feature/profile/presentation/views/profile_view.dart';
 
 Future<void> main() async {
    WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +29,8 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             scaffoldBackgroundColor: AppColors.white,
             appBarTheme: AppBarTheme(
-              color: AppColors.white
+              color: AppColors.white,
+              scrolledUnderElevation: 0
             )
           ),
           home: BottomNavBarView(),
