@@ -22,7 +22,7 @@ class SignInOptionWidget extends StatelessWidget {
     final textColor = isDark ? Colors.white : AppColors.black;
     return GestureDetector(
       onTap: onTap,
-      child: AuthContainer(
+      child: CustomContainer(
         color: color,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

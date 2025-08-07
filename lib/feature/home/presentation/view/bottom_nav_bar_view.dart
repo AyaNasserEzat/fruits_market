@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_market/core/utils/app_assets.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/core/utils/app_strings.dart';
+import 'package:fruits_market/feature/favorite/presentation/view/favorite_view.dart';
 import 'package:fruits_market/feature/home/presentation/view/home_view.dart';
 import 'package:fruits_market/feature/profile/presentation/views/profile_view.dart';
 
@@ -38,10 +39,10 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
   ];
 
   final List<Widget> views = [
-    HomeView(),
+    FavoriteView(),
     ProfileView(),
-    HomeView(),
-    ProfileView(),
+    FavoriteView(),
+   FavoriteView(),
     ProfileView(),
   ];
 

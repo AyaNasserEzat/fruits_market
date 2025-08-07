@@ -50,4 +50,22 @@ class AppTextStyle {
     fontSize: 18.sp,
     fontFamily: 'Arial',
   );
+  static TextStyle titilliumWebBold = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 16.sp,
+    fontFamily: 'TitilliumWeb',
+  );
+  static TextStyle titilliumWebRegular = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 14.sp,
+    fontFamily: 'TitilliumWeb',
+  );
+  static TextStyle titilliumWebRegularLineThrough = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 14.sp,
+    fontFamily: 'TitilliumWeb',
+    color: AppColors.greyShaded500,
+    decoration: TextDecoration.lineThrough,
+    decorationColor: AppColors.greyShaded500,
+  );
 }

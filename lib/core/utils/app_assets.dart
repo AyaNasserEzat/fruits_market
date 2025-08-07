@@ -31,6 +31,9 @@ class AppAssets {
   static const String instagramIcon = 'assets/images/instagrame_icon.svg';
   static const String youtubeIcon = 'assets/images/youtube.svg';
 
+  //assets/images/fav_product.svg
+
+static const String favProductImage = 'assets/images/fav_product.svg';
 
  
 }
