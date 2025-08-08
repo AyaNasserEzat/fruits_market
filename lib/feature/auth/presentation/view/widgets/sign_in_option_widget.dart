@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
-import 'package:fruits_market/feature/auth/presentation/view/widgets/auth_container.dart';
+import 'package:fruits_market/feature/auth/presentation/view/widgets/customcontainer.dart';
 
 class SignInOptionWidget extends StatelessWidget {
   const SignInOptionWidget({

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/core/utils/app_text_style.dart';
-import 'package:fruits_market/feature/auth/presentation/view/widgets/auth_container.dart';
+import 'package:fruits_market/feature/auth/presentation/view/widgets/customcontainer.dart';
 import 'package:fruits_market/feature/favorite/data/models/favorit_product_model.dart';
 
 class FavoriteProductItem extends StatelessWidget {
@@ -22,7 +22,7 @@ final FavoritProductModel favoritProductModel;
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 12.0),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
                     width: 120.w,

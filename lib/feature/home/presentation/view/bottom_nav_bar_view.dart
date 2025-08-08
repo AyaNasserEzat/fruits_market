@@ -39,7 +39,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
   ];
 
   final List<Widget> views = [
-    FavoriteView(),
+    HomeView(),
     ProfileView(),
     FavoriteView(),
    FavoriteView(),

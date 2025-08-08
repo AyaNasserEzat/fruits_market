@@ -56,8 +56,9 @@ class AppTextStyle {
     fontFamily: 'TitilliumWeb',
   );
   static TextStyle titilliumWebRegular = TextStyle(
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
     fontSize: 14.sp,
+    color: AppColors.grey,
     fontFamily: 'TitilliumWeb',
   );
   static TextStyle titilliumWebRegularLineThrough = TextStyle(

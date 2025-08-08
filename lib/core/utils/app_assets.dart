@@ -31,9 +31,18 @@ class AppAssets {
   static const String instagramIcon = 'assets/images/instagrame_icon.svg';
   static const String youtubeIcon = 'assets/images/youtube.svg';
 
-  //assets/images/fav_product.svg
+  //assets/images/like.svg
 
 static const String favProductImage = 'assets/images/fav_product.svg';
 
- 
+///home
+static const String category1Image = 'assets/images/category1_image.png';
+static const String searchIcon = 'assets/images/search_icon.svg';
+static const String filterIcon = 'assets/images/filter_icon.svg';
+static const String homeImage = 'assets/images/home.png';
+static const String deliveryIcon = 'assets/images/delviry_icon.svg';
+
+static const String locationIcon = 'assets/images/location_icon.svg';
+static const String like='assets/images/like.svg';
+static const String onehandred='assets/images/100.svg';
 }

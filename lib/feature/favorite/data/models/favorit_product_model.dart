@@ -20,7 +20,21 @@ class FavoritProductModel {
       productName: 'Product Name',
       price: '14.00',
       salPrice: '12.00',
-      productImage: AppAssets.bassketIon,
+      productImage: AppAssets.instagramIcon,
+      storName: 'stor 1',
+    ),
+     FavoritProductModel(
+      productName: 'Product Name',
+      price: '14.00',
+      salPrice: '12.00',
+      productImage: AppAssets.instagramIcon,
+      storName: 'stor 1',
+    ),
+     FavoritProductModel(
+      productName: 'Product Name',
+      price: '14.00',
+      salPrice: '12.00',
+      productImage: AppAssets.instagramIcon,
       storName: 'stor 1',
     ),
   ];

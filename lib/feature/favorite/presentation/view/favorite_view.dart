@@ -18,13 +18,18 @@ class FavoriteView extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_ios)),
       ),
-      body: ListView.builder(
+      body: 
+      ListView.builder(
+        itemCount: FavoritProductModel.favorits.length,
         itemBuilder: (context, index) {
           return FavoriteProductItem(
             favoritProductModel: FavoritProductModel.favorits[index],
           );
         },
       ),
+      // FavoriteProductItem(
+      //       favoritProductModel: FavoritProductModel.favorits[0],
+      //     )
     );
   }
 }
