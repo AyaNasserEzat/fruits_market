@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fruits_market/core/utils/app_assets.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/core/utils/app_text_style.dart';
+import 'package:fruits_market/core/widgets/custom_circle_container.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/customcontainer.dart';
 import 'package:fruits_market/feature/home/presentation/models/seller_model.dart';
 
@@ -17,21 +18,11 @@ class SellerItem extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-            width: 80.w,
-            decoration: BoxDecoration(
-              color: AppColors.white,
-              shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(blurRadius: 2, color: AppColors.greyShaded500),
-              ],
-            ),
-            child: Center(
-              child: SvgPicture.asset(
-                sellerModel.compnyLogo,
-                width: 60.w,
-                height: 60.h,
-              ),
+          CustomCircleContainer(
+            widget: SvgPicture.asset(
+              sellerModel.compnyLogo,
+              width: 60.w,
+              height: 60.h,
             ),
           ),
           SizedBox(width: 20.w),
