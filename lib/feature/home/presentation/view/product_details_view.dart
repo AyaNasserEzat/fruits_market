@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:fruits_market/core/utils/app_assets.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/core/utils/app_strings.dart';
 import 'package:fruits_market/core/utils/app_text_style.dart';
+import 'package:fruits_market/core/widgets/custom_arrow_back_icon.dart';
+import 'package:fruits_market/feature/home/presentation/view/widgets/add_to_cart_button.dart';
 
 class ProductDetailsView extends StatelessWidget {
   const ProductDetailsView({super.key});
@@ -14,6 +15,7 @@ class ProductDetailsView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(AppStrings.appName, style: AppTextStyle.poppinsBoldGreen),
+        leading: CustomArrowBackIcon(),
         actions: [
           Icon(Icons.search, size: 25),
           SizedBox(width: 10),
@@ -56,7 +58,7 @@ class ProductDetailsView extends StatelessWidget {
                           color: AppColors.greyDark,
                         ),
                       ),
-              
+
                       Text(
                         '10.00',
                         style: AppTextStyle.titilliumWebRegularLineThroughRed,
@@ -96,18 +98,18 @@ class ProductDetailsView extends StatelessWidget {
                         ),
                         value: '1 Kg - 6.25 KD',
                         groupValue: '1 Kg - 6.25 KD',
-              
+
                         onChanged: (value) {},
                       ),
+
                       //50 Gram - 4.00 KD
-                   
                     ],
                   ),
-                       ExpansionTile(
+                  ExpansionTile(
                     shape: Border.all(color: AppColors.white),
-                   collapsedShape: Border.all(color: AppColors.white),
-                   collapsedBackgroundColor: AppColors.white,
-              
+                    collapsedShape: Border.all(color: AppColors.white),
+                    collapsedBackgroundColor: AppColors.white,
+
                     title: Text(
                       'Select Addons',
                       style: AppTextStyle.titilliumWebBold,
@@ -129,12 +131,12 @@ class ProductDetailsView extends StatelessWidget {
                         ),
                         value: '1 Kg - 6.25 KD',
                         groupValue: '1 Kg - 6.25 KD',
-              
+
                         onChanged: (value) {},
                       ),
                     ],
-                        )
-                  
+                  ),
+                  AddToCartButton(),
                 ],
               ),
             ],
