@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_market/core/utils/app_assets.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/core/utils/app_strings.dart';
+import 'package:fruits_market/feature/cart/presentation/view/cart_view.dart';
 import 'package:fruits_market/feature/favorite/presentation/view/favorite_view.dart';
 import 'package:fruits_market/feature/home/presentation/view/home_view.dart';
 import 'package:fruits_market/feature/profile/presentation/views/profile_view.dart';
@@ -40,9 +41,9 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
 
   final List<Widget> views = [
     HomeView(),
-    ProfileView(),
+    CartView(),
     FavoriteView(),
-   FavoriteView(),
+    CartView(),
     ProfileView(),
   ];
 
@@ -90,7 +91,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
                           ],
                         ),
                       )
-                      : SvgPicture.asset(icons[index],width: 30.w,),
+                      : SvgPicture.asset(icons[index], width: 30.w),
             );
           }),
         ),
