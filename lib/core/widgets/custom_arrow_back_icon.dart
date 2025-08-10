@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 class CustomArrowBackIcon extends StatelessWidget {
-  const CustomArrowBackIcon({
-    super.key,
-  });
+  const CustomArrowBackIcon({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios));
+    return IconButton(
+      onPressed: () {
+        Navigator.pop(context);
+      },
+      icon: Icon(Icons.arrow_back_ios),
+    );
   }
 }

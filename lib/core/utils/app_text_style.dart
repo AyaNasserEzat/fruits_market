@@ -32,14 +32,14 @@ class AppTextStyle {
   );
 
   static TextStyle arialRegular = TextStyle(
-    fontSize: 14.sp,
+    fontSize: 18.sp,
     fontWeight: FontWeight.w400,
     color: AppColors.grey,
     fontFamily: 'Arial',
   );
 
   static TextStyle arialRegular18 = TextStyle(
-    fontSize: 18.sp,
+    fontSize: 20.sp,
     color: AppColors.black,
     fontFamily: 'Arial',
   );
@@ -52,21 +52,46 @@ class AppTextStyle {
   );
   static TextStyle titilliumWebBold = TextStyle(
     fontWeight: FontWeight.bold,
-    fontSize: 16.sp,
+    fontSize: 20.sp,
+    fontFamily: 'TitilliumWeb',
+  );
+  static TextStyle titilliumWebBoldPrimaryColor = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 20.sp,
+    color: AppColors.primaryColor,
+    fontFamily: 'TitilliumWeb',
+  );
+  static TextStyle titilliumWebBold24 = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 24.sp,
+    fontFamily: 'TitilliumWeb',
+  );
+  static TextStyle titilliumWebSemiBold = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 20.sp,
+    color: AppColors.white,
     fontFamily: 'TitilliumWeb',
   );
   static TextStyle titilliumWebRegular = TextStyle(
     fontWeight: FontWeight.w500,
-    fontSize: 14.sp,
+    fontSize: 18.sp,
     color: AppColors.grey,
     fontFamily: 'TitilliumWeb',
   );
   static TextStyle titilliumWebRegularLineThrough = TextStyle(
     fontWeight: FontWeight.w400,
-    fontSize: 14.sp,
+    fontSize: 19.sp,
     fontFamily: 'TitilliumWeb',
     color: AppColors.greyShaded500,
     decoration: TextDecoration.lineThrough,
     decorationColor: AppColors.greyShaded500,
+  );
+    static TextStyle titilliumWebRegularLineThroughRed = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 19.sp,
+    fontFamily: 'TitilliumWeb',
+    color: AppColors.redLight,
+    decoration: TextDecoration.lineThrough,
+    decorationColor: AppColors.redLight,
   );
 }

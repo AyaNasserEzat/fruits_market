@@ -36,6 +36,7 @@ class AppAssets {
 static const String favProductImage = 'assets/images/fav_product.svg';
 
 ///home
+static const String compnyLogo='assets/images/compony_logo.svg';
 static const String category1Image = 'assets/images/category1_image.png';
 static const String searchIcon = 'assets/images/search_icon.svg';
 static const String filterIcon = 'assets/images/filter_icon.svg';
@@ -45,4 +46,14 @@ static const String deliveryIcon = 'assets/images/delviry_icon.svg';
 static const String locationIcon = 'assets/images/location_icon.svg';
 static const String like='assets/images/like.svg';
 static const String onehandred='assets/images/100.svg';
+
+
+//seller products
+//assets\images\product_details_image.svg
+static const String arrowProducts='assets/images/arrow_products.svg';
+static const String basketAdd='assets/images/basket, add, Buy Shop.svg';
+static const String productImage='assets/images/product_image.svg';
+static const String productDetailsImage='assets/images/product_details_image.png';
+
+
 }

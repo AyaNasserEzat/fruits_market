@@ -10,7 +10,7 @@ class AppStrings {
   static const String signUpTitle = "Sign Up to Wikala";
   static const String fullNameAndLastName = "First and Last Name";
   static const String fullName = "Full Name";
-   static const String name = "Name";
+  static const String name = "Name";
   static const String countryCode = "KW";
   static const String mobileNumber = "Mobile Number";
   static const String mobileNumberWithWhatspp = "phone Number with whatsapp";
@@ -37,6 +37,8 @@ class AppStrings {
   static const String conntactUs = 'Conntact Us';
   static const String message = 'Message';
   static const String supmit = 'Supmit';
+  static const String productDescription =
+      """Lorem ipsum dolor sit amet, consectetur adipiscing elit,Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. """;
   static const String termsAndConditionText = """
 Welcome to our application. By using this app, you agree to comply with and be bound by the following terms and conditions. Please read them carefully before using any part of the app.
 

@@ -8,7 +8,7 @@ class CustomContainer extends StatelessWidget {
     required this.child,
     this.color = AppColors.white,
     this.padding = const EdgeInsets.only(left: 16),
-    this.height = 74,
+    this.height = 60,
   });
   final Widget child;
   final EdgeInsetsGeometry? padding;
@@ -22,7 +22,9 @@ class CustomContainer extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(28),
         color: color,
-        boxShadow: [BoxShadow(blurRadius: 2, color: AppColors.greyShaded500)],
+      boxShadow: [
+            BoxShadow(color:Color(0x40000000), blurRadius: 4,offset: Offset(0, 1)),
+          ],
       ),
       child: child,
     );

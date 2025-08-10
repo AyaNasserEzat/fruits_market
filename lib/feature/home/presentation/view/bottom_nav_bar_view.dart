@@ -90,7 +90,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
                           ],
                         ),
                       )
-                      : SvgPicture.asset(icons[index]),
+                      : SvgPicture.asset(icons[index],width: 30.w,),
             );
           }),
         ),

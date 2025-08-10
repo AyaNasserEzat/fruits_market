@@ -11,7 +11,7 @@ class SellerModel {
 
 
   static List<SellerModel> sellers = [
-    SellerModel(sellerName: 'Seller name', deliveryCharge: 'delivery Charge', productNmae: 'pizza', compnyLogo: AppAssets.instagramIcon, isOpen:true,location: '2.5 KM' ),
+    SellerModel(sellerName: 'Seller name', deliveryCharge: '.5 KD', productNmae: 'pizza', compnyLogo: AppAssets.compnyLogo, isOpen:true,location: '2.5 KM' ),
   ];
 
   SellerModel({required this.sellerName, required this.deliveryCharge, required this.productNmae, required this.compnyLogo, required this.isOpen,required this.location});

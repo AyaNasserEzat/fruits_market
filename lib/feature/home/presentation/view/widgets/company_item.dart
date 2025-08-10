@@ -10,8 +10,8 @@ import 'package:fruits_market/feature/auth/presentation/view/widgets/customconta
 import 'package:fruits_market/feature/home/presentation/models/seller_model.dart';
 import 'package:fruits_market/feature/home/presentation/view/all_about_seller_view.dart';
 
-class SellerItem extends StatelessWidget {
-  const SellerItem({super.key, required this.sellerModel});
+class CompanyItem extends StatelessWidget {
+  const CompanyItem({super.key, required this.sellerModel});
   final SellerModel sellerModel;
   @override
   Widget build(BuildContext context) {
@@ -44,9 +44,9 @@ class SellerItem extends StatelessWidget {
                       sellerModel.sellerName,
                       style: AppTextStyle.titilliumWebBold,
                     ),
-                    SvgPicture.asset(AppAssets.onehandred,width: 25.w,height: 25.h,),
-                    SizedBox(width: 90.w),
-                    Text('4.5'),
+                  
+                    SizedBox(width: 120.w),
+                    SvgPicture.asset(AppAssets.onehandred,width: 30.w,height: 30.h,),
                   ],
                 ),
                 Row(
@@ -70,7 +70,7 @@ class SellerItem extends StatelessWidget {
                     ),
                     Text(
                       "Open",
-                      style: AppTextStyle.titilliumWebSemiBold.copyWith(
+                      style: AppTextStyle.titilliumWebBold.copyWith(
                         color: AppColors.greenLight,
                       ),
                     ),
@@ -79,23 +79,10 @@ class SellerItem extends StatelessWidget {
                       radius: 3,
                     ),
                     Text(
-                      sellerModel.productNmae,
-                      style: AppTextStyle.titilliumWebRegular.copyWith(
-                        color: AppColors.blue,
-                      ),
+                      '4.5',
+                      style: AppTextStyle.titilliumWebRegular
                     ),
-                    SizedBox(width: 40.w),
-                    Text(
-                      sellerModel.location,
-                      style: AppTextStyle.arialRegular.copyWith(
-                        color: AppColors.primaryColor,
-                      ),
-                    ),
-                    SvgPicture.asset(
-                      AppAssets.locationIcon,
-                      width: 20.w,
-                      height: 20.h,
-                    ),
+                    
                   ],
                 ),
               ],

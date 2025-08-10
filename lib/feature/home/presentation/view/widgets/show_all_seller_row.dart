@@ -12,7 +12,7 @@ class ShowAllSellerRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text("Seller", style: AppTextStyle.segoeUIBold),
+        Text("Sellers", style: AppTextStyle.segoeUIBold),
         Spacer(),
         Text(
           "Show All",
