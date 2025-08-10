@@ -26,7 +26,7 @@ class FavoriteProductItem extends StatelessWidget {
                 height: 50.h,
               ),
             ),
-            SizedBox(width: 20.w),
+            SizedBox(width: 15.w),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -37,7 +37,7 @@ class FavoriteProductItem extends StatelessWidget {
                       favoritProductModel.productName,
                       style: AppTextStyle.titilliumWebBold,
                     ),
-                    SizedBox(width: 140.w),
+                    SizedBox(width: 120.w),
                     CustomCircleContainer(
                       width: 45.w,
                       height: 40.h,
