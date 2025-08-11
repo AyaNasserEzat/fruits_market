@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_market/core/utils/app_assets.dart';
-import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/core/utils/app_text_style.dart';
 import 'package:fruits_market/core/widgets/app_bar.dart';
 import 'package:fruits_market/core/widgets/custom_circle_container.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/customcontainer.dart';
+import 'package:fruits_market/feature/cart/presentation/view/widgets/plus_minus_quntaity_widget.dart';
+import 'package:fruits_market/feature/cart/presentation/view/widgets/price_and_sale_price_row.dart';
+import 'package:fruits_market/feature/cart/presentation/view/widgets/up_to_offer_container.dart';
 
 class CartView extends StatelessWidget {
   const CartView({super.key});
@@ -25,50 +27,39 @@ class CartView extends StatelessWidget {
                 spacing: 10.w,
                 children: [
                   CustomCircleContainer(
-                    height: 90,
-                    widget: SvgPicture.asset(AppAssets.instagramIcon,width: 40.w,
-                  height: 40.h,),
+                    height: 140.h,
+                    width: 140.w,
+                    widget: SvgPicture.asset(
+                      AppAssets.instagramIcon,
+                      width: 40.w,
+                      height: 40.h,
+                    ),
                   ),
-                     Column(
-                spacing: 7.h,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Product Name',
-                    style: AppTextStyle.titilliumWebBold
-                  ),
-                  Row(
-                    spacing: 10,
+                  Column(
+                    spacing: 7.h,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        '12.00',
-                        style: AppTextStyle.titilliumWebRegular,
+                      Row(
+                        children: [
+                          Text(
+                            'Product Name',
+                            style: AppTextStyle.titilliumWebBold,
+                          ),
+                          SizedBox(width: 90.w),
+                          Icon(Icons.delete_forever, size: 30),
+                        ],
                       ),
-              
-                      Text(
-                        '10.00',
-                        style: AppTextStyle.titilliumWebRegularLineThrough,
+                      PriceAndSalePriceRow(),
+                      Row(
+                        children: [
+                          UpToOfferContainer(),
+                          SizedBox(width: 20.w),
+                          PlusMinusQuntityWidget(),
+                        ],
                       ),
                     ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(24),
-                      color: AppColors.redLight,
-                    ),
-                    height: 30.h,
-                    width: 120.w,
-                    child: Center(
-                      child: Text(
-                        'up to 10% off',
-                        style: AppTextStyle.titilliumWebSemiBold.copyWith(fontSize: 16.sp),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            
                 ],
               ),
             ),
