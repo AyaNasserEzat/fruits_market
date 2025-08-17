@@ -49,11 +49,13 @@ static const String onehandred='assets/images/100.svg';
 
 
 //seller products
-//assets\images\product_details_image.svg
+//assets\images\delivery_status_icon.svg
 static const String arrowProducts='assets/images/arrow_products.svg';
 static const String basketAdd='assets/images/basket, add, Buy Shop.svg';
 static const String productImage='assets/images/product_image.svg';
 static const String productDetailsImage='assets/images/product_details_image.png';
+static const String deliveringStatus='assets/images/delivering_status.svg';
+static const String deliveringStatusIcon='assets/images/deliviring_status_icon.png';
 
 
 }

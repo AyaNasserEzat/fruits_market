@@ -20,7 +20,6 @@ class CompanyItem extends StatelessWidget {
         navigatPush(context, AllAboutSellerView());
       },
       child: CustomContainer(
-        height: 150.h,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -44,9 +43,13 @@ class CompanyItem extends StatelessWidget {
                       sellerModel.sellerName,
                       style: AppTextStyle.titilliumWebBold,
                     ),
-                  
-                    SizedBox(width: 120.w),
-                    SvgPicture.asset(AppAssets.onehandred,width: 30.w,height: 30.h,),
+
+                    SizedBox(width: 90.w),
+                    SvgPicture.asset(
+                      AppAssets.onehandred,
+                      width: 30.w,
+                      height: 30.h,
+                    ),
                   ],
                 ),
                 Row(
@@ -78,11 +81,7 @@ class CompanyItem extends StatelessWidget {
                       backgroundColor: AppColors.greyShaded500,
                       radius: 3,
                     ),
-                    Text(
-                      '4.5',
-                      style: AppTextStyle.titilliumWebRegular
-                    ),
-                    
+                    Text('4.5', style: AppTextStyle.titilliumWebRegular),
                   ],
                 ),
               ],
@@ -90,7 +89,6 @@ class CompanyItem extends StatelessWidget {
           ],
         ),
       ),
-    
     );
   }
 }

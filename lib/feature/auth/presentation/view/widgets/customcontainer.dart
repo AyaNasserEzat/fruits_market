@@ -8,7 +8,7 @@ class CustomContainer extends StatelessWidget {
     required this.child,
     this.color = AppColors.white,
     this.padding = const EdgeInsets.only(left: 16),
-    this.height = 60,
+    this.height ,
   });
   final Widget child;
   final EdgeInsetsGeometry? padding;
@@ -17,7 +17,7 @@ class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height!.h,
+     // height: height!.h,
       padding: padding,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(28),
@@ -26,7 +26,10 @@ class CustomContainer extends StatelessWidget {
             BoxShadow(color:Color(0x40000000), blurRadius: 4,offset: Offset(0, 1)),
           ],
       ),
-      child: child,
+      child: Padding(
+        padding: const EdgeInsets.all(8),
+        child: child,
+      ),
     );
   }
 }

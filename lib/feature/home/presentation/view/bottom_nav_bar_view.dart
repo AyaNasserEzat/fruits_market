@@ -7,6 +7,7 @@ import 'package:fruits_market/core/utils/app_strings.dart';
 import 'package:fruits_market/feature/cart/presentation/view/cart_view.dart';
 import 'package:fruits_market/feature/favorite/presentation/view/favorite_view.dart';
 import 'package:fruits_market/feature/home/presentation/view/home_view.dart';
+import 'package:fruits_market/feature/order/presentation/view/order_view.dart';
 import 'package:fruits_market/feature/profile/presentation/views/profile_view.dart';
 
 class BottomNavBarView extends StatefulWidget {
@@ -43,7 +44,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
     HomeView(),
     CartView(),
     FavoriteView(),
-    CartView(),
+    OrderView(),
     ProfileView(),
   ];
 

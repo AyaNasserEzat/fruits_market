@@ -22,13 +22,12 @@ class CartView extends StatelessWidget {
         child: Column(
           children: [
             CustomContainer(
-              height: 150,
+         
               child: Row(
                 spacing: 10.w,
                 children: [
                   CustomCircleContainer(
-                    height: 140.h,
-                    width: 140.w,
+                   
                     widget: SvgPicture.asset(
                       AppAssets.instagramIcon,
                       width: 40.w,

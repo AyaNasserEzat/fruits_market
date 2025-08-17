@@ -37,7 +37,7 @@ class FavoriteProductItem extends StatelessWidget {
                       favoritProductModel.productName,
                       style: AppTextStyle.titilliumWebBold,
                     ),
-                    SizedBox(width: 120.w),
+                    SizedBox(width: 80.w),
                     CustomCircleContainer(
                       width: 45.w,
                       height: 40.h,

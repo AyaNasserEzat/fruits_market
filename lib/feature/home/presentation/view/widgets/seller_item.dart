@@ -20,13 +20,13 @@ class SellerItem extends StatelessWidget {
         navigatPush(context, AllAboutSellerView());
       },
       child: CustomContainer(
-        height: 150.h,
+       // height: 150.h,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CustomCircleContainer(
-              width: 120.w,
-                height: 120.h,
+              // width: 120.w,
+              //   height: 120.h,
               widget: SvgPicture.asset(
                 sellerModel.compnyLogo,
                 width: 60.w,
@@ -47,12 +47,12 @@ class SellerItem extends StatelessWidget {
                       style: AppTextStyle.titilliumWebBold,
                     ),
                     SvgPicture.asset(AppAssets.onehandred,width: 25.w,height: 25.h,),
-                    SizedBox(width: 70.w),
+                    SizedBox(width: 50.w),
                     Text('4.5'),
                   ],
                 ),
                 Row(
-                  spacing: 10,
+                  spacing: 8,
                   children: [
                     SvgPicture.asset(AppAssets.deliveryIcon),
                     Text(
@@ -86,7 +86,7 @@ class SellerItem extends StatelessWidget {
                         color: AppColors.blue,
                       ),
                     ),
-                    SizedBox(width: 20.w),
+                    SizedBox(width: 10.w),
                     Text(
                       sellerModel.location,
                       style: AppTextStyle.arialRegular.copyWith(
@@ -102,6 +102,7 @@ class SellerItem extends StatelessWidget {
                 ),
               ],
             ),
+          
           ],
         ),
       ),
