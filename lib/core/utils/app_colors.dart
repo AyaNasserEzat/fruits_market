@@ -18,5 +18,6 @@ class AppColors {
   static const Color greyDark = Color(0xff656565);
   static const Color deliveringStatusBackGroundColor = Color(0xffFFF3C9);
   static const Color deliveringStatusdColor = Color(0xffFEC500);
-  //FEC500
+  static const Color green = Color(0xff00BB1A);
+  //00BB1
 }

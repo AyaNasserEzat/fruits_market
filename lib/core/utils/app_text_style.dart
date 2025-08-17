@@ -52,7 +52,7 @@ class AppTextStyle {
   );
   static TextStyle titilliumWebBold = TextStyle(
     fontWeight: FontWeight.bold,
-    fontSize: 20.sp,
+    fontSize: 21.sp,
     fontFamily: 'TitilliumWeb',
   );
   static TextStyle titilliumWebBoldPrimaryColor = TextStyle(

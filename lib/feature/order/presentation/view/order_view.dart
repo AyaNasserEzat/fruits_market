@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_market/core/utils/app_assets.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/core/utils/app_text_style.dart';
+import 'package:fruits_market/core/utils/commans.dart';
 import 'package:fruits_market/core/widgets/app_bar.dart';
 import 'package:fruits_market/core/widgets/custom_circle_container.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/customcontainer.dart';
+import 'package:fruits_market/feature/order/presentation/view/widgets/order_tracking_view.dart';
 
 class OrderView extends StatelessWidget {
   const OrderView({super.key});
@@ -34,12 +35,15 @@ class OrderView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('#8882610', style: AppTextStyle.titilliumWebBold),
-        
+
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         spacing: 5.w,
                         children: [
-                          Text("9 Sep", style: AppTextStyle.titilliumWebRegular),
+                          Text(
+                            "9 Sep",
+                            style: AppTextStyle.titilliumWebRegular,
+                          ),
                           CircleAvatar(
                             backgroundColor: AppColors.greyShaded500,
                             radius: 2,
@@ -58,7 +62,7 @@ class OrderView extends StatelessWidget {
                             "Status:",
                             style: AppTextStyle.titilliumWebRegular,
                           ),
-        
+
                           Text(
                             'Delivering',
                             style: AppTextStyle.titilliumWebRegular.copyWith(
@@ -75,11 +79,19 @@ class OrderView extends StatelessWidget {
                     height: 80,
                     widget: Container(
                       decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.white,width: 2,),
+                        border: Border.all(color: AppColors.white, width: 2),
                         borderRadius: BorderRadius.circular(8),
-                        color: AppColors.deliveringStatusdColor
+                        color: AppColors.deliveringStatusdColor,
                       ),
-                      child: Icon(Icons.arrow_forward_ios_rounded,color: AppColors.white,))),
+                      child: GestureDetector(
+                        onTap: (){
+                          navigatPush(context, OrderTrackingView());
+                        },
+                      child: Icon(  Icons.arrow_forward_ios_rounded,
+                        color: AppColors.white,
+                      ),),
+                    ),
+                  ),
                 ],
               ),
             ),
