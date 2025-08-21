@@ -28,73 +28,79 @@ class OrderTrackingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: abbBar(title: "Order Tracking"),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: FixedTimeline.tileBuilder(
-          theme: TimelineTheme.of(context).copyWith(
-            nodePosition: 0
-          ),
-          builder: TimelineTileBuilder.connected(
-            connectionDirection: ConnectionDirection.before,
-            contentsAlign: ContentsAlign.basic,
-   
-            itemCount: statuses.length,
-            contentsBuilder:
-                (context, index) => Padding(
-                  padding: const EdgeInsets.only(left: 12.0,top: 30,bottom: 20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    
-                    children: [
-                      Text(
-                        statuses[index],
-                        style: AppTextStyle.titilliumWebBold,
-                      ),
-                      Text(
-                        dates[index],
-                        style: AppTextStyle.titilliumWebRegular,
-                      ),
-                    ],
-                  ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+          spacing: 5,
+            children: [
+              Text.rich(TextSpan(text:'Your Order Code: ',style: AppTextStyle.titilliumWebRegular,children: [
+                TextSpan(text:"#88957",style:AppTextStyle.titilliumWebBold ),
+              ] ))
+              ,
+              Text('3 items - 37.50 KD', style: AppTextStyle.titilliumWebRegular,),
+              Text('Payment Method : Cash', style: AppTextStyle.titilliumWebRegular,),
+              FixedTimeline.tileBuilder(
+                theme: TimelineTheme.of(context).copyWith(
+                  nodePosition: 0
                 ),
-            indicatorBuilder: (context, index) {
-              if (index == currentStep) {
-                return const DotIndicator(color: AppColors.green, size: 30);
-              } else if (index < currentStep) {
-                return const DotIndicator(color: Colors.green, size: 30);
-              } else {
-                return ContainerIndicator(
-                  child: Container(
-                    width: 30,
-                    height: 30,
-                    decoration: BoxDecoration(
-                      color: AppColors.white,
-                      shape: BoxShape.circle,
-                      border: Border.all(width: 1, color: AppColors.green),
-                    ),
-                  ),
-                );
-              }
-            },
-            connectorBuilder: (context, index, connectorType) {
-              return SolidLineConnector(color: AppColors.green);
-            },
-          ),
-        ),
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            CustomButton(onpressed: () {}, text: "Confirm"),
+                builder: TimelineTileBuilder.connected(
+                  connectionDirection: ConnectionDirection.before,
+                  contentsAlign: ContentsAlign.basic,
+                 
+                  itemCount: statuses.length,
+                  contentsBuilder:
+                      (context, index) => Padding(
+                        padding: const EdgeInsets.only(left: 12.0,top: 28,bottom: 10),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          
+                          children: [
+                            Text(
+                              statuses[index],
+                              style: AppTextStyle.titilliumWebBold,
+                            ),
+                            Text(
+                              dates[index],
+                              style: AppTextStyle.titilliumWebRegular,
+                            ),
+                          ],
+                        ),
+                      ),
+                  indicatorBuilder: (context, index) {
+                    if (index == currentStep) {
+                      return const DotIndicator(color: AppColors.green, size: 30);
+                    } else if (index > currentStep) {
+                      return const DotIndicator(color: Colors.green, size: 30);
+                    } else {
+                      return ContainerIndicator(
+                        child: Container(
+                          width: 30,
+                          height: 30,
+                          decoration: BoxDecoration(
+                            color: AppColors.white,
+                            shape: BoxShape.circle,
+                            border: Border.all(width: 1, color: AppColors.green),
+                          ),
+                        ),
+                      );
+                    }
+                  },
+                  connectorBuilder: (context, index, connectorType) {
+                    return SolidLineConnector(color: AppColors.green);
+                  },
+                ),
+                
+              ),
+              CustomButton(onpressed: () {}, text: "Confirm"),
             const SizedBox(height: 12),
             CustomButton(
               onpressed: () {},
               text: "Cancel Order",
-              color: AppColors.red,
+              color: AppColors.redColor,
             ),
-          ],
+            ],
+          ),
         ),
       ),
     );
