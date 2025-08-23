@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:fruits_market/core/utils/app_assets.dart';
+import 'package:fruits_market/core/utils/app_colors.dart';
 import 'package:fruits_market/core/utils/app_text_style.dart';
+import 'package:fruits_market/core/utils/commans.dart';
 import 'package:fruits_market/core/widgets/app_bar.dart';
-import 'package:fruits_market/core/widgets/custom_circle_container.dart';
-import 'package:fruits_market/feature/auth/presentation/view/widgets/customcontainer.dart';
-import 'package:fruits_market/feature/cart/presentation/view/widgets/plus_minus_quntaity_widget.dart';
-import 'package:fruits_market/feature/cart/presentation/view/widgets/price_and_sale_price_row.dart';
-import 'package:fruits_market/feature/cart/presentation/view/widgets/up_to_offer_container.dart';
+import 'package:fruits_market/core/widgets/custom_button.dart';
+import 'package:fruits_market/feature/cart/presentation/view/widgets/cart_item.dart';
+import 'package:fruits_market/feature/cart/presentation/view/widgets/dash_line_widget.dart';
+import 'package:fruits_market/feature/checkout/presentation/view/checkout_view.dart';
 
 class CartView extends StatelessWidget {
   const CartView({super.key});
@@ -19,50 +17,128 @@ class CartView extends StatelessWidget {
       appBar: abbBar(title: 'Basket'),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            CustomContainer(
-         
-              child: Row(
-                spacing: 10.w,
+        child: SingleChildScrollView(
+          child: Column(
+            spacing: 10,
+            children: [
+              CartItem(),
+              SizedBox(height: 300),
+              DashLine(),
+              Row(
                 children: [
-                  CustomCircleContainer(
-                   
-                    widget: SvgPicture.asset(
-                      AppAssets.instagramIcon,
-                      width: 40.w,
-                      height: 40.h,
-                    ),
-                  ),
-                  Column(
-                    spacing: 7.h,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            'Product Name',
-                            style: AppTextStyle.titilliumWebBold,
+                  Text('SubTotal', style: AppTextStyle.titilliumWebRegular),
+                  Spacer(),
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '345.89 ',
+                          style: AppTextStyle.titilliumWebBold.copyWith(
+                            color: AppColors.greyDark,
                           ),
-                          SizedBox(width: 90.w),
-                          Icon(Icons.delete_forever, size: 30),
-                        ],
-                      ),
-                      PriceAndSalePriceRow(),
-                      Row(
-                        children: [
-                          UpToOfferContainer(),
-                          SizedBox(width: 20.w),
-                          PlusMinusQuntityWidget(),
-                        ],
-                      ),
-                    ],
+                        ),
+                        TextSpan(
+                          text: 'kd',
+                          style: AppTextStyle.titilliumWebBold12,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
-            ),
-          ],
+              //
+              Row(
+                children: [
+                  Text(
+                    'Shipping Charges',
+                    style: AppTextStyle.titilliumWebRegular,
+                  ),
+                  Spacer(),
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '345.89 ',
+                          style: AppTextStyle.titilliumWebBold.copyWith(
+                            color: AppColors.greyDark,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'kd',
+                          style: AppTextStyle.titilliumWebBold12,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Bag Total',
+                    style: AppTextStyle.titilliumWebBold.copyWith(
+                      color: AppColors.primaryColor,
+                    ),
+                  ),
+                  Spacer(),
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '345 ',
+                          style: AppTextStyle.titilliumWebBold.copyWith(
+                            color: AppColors.greyDark,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'kd',
+                          style: AppTextStyle.titilliumWebBold12,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+             SizedBox(height: 34,)
+,              Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '4 items in cart',
+                        style: AppTextStyle.titilliumWebRegular,
+                      ),
+                      Text.rich(
+                        TextSpan(
+                          children: [
+                            TextSpan(
+                              text: '345 ',
+                              style: AppTextStyle.titilliumWebBold.copyWith(
+                                color: AppColors.greyDark,
+                              ),
+                            ),
+                            TextSpan(
+                              text: 'kd',
+                              style: AppTextStyle.titilliumWebBold12,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  CustomButton(
+                    width: 230,
+                    onpressed: () {
+                      navigatPush(context, CheckoutView());
+                    },
+                    text: 'Procced To Checkout',
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

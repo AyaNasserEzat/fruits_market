@@ -58,8 +58,6 @@ class AppAssets {
   static const String workingImage = 'assets/images/working_image.svg';
   static const String deliveredImage = 'assets/images/delivered_image.svg';
   static const String deliveringStatus = 'assets/images/delivering_status.svg';
-  static const String deliveringStatusImage =
-      'assets/images/deliviring_status_image.png';
 
   static const String errorImage = 'assets/images/error_image.svg';
 

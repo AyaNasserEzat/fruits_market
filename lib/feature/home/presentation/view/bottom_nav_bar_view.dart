@@ -42,9 +42,10 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
 
   final List<Widget> views = [
     HomeView(),
+    OrderView(),
     CartView(),
     FavoriteView(),
-    OrderView(),
+
     ProfileView(),
   ];
 

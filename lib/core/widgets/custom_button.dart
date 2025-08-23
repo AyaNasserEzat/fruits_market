@@ -18,7 +18,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width,
-      height: 65.h,
+      height: 60.h,
       child: ElevatedButton(
         onPressed: onpressed,
         style: ElevatedButton.styleFrom(
@@ -31,7 +31,7 @@ class CustomButton extends StatelessWidget {
         child: Padding(
          padding: EdgeInsets.symmetric(horizontal: 16.w,vertical: 14.h),
         
-          child: Text(text, style: AppTextStyle.meduimStyle),
+          child: Center(child: Text(text, style: AppTextStyle.meduimStyle)),
         ),
       ),
     );

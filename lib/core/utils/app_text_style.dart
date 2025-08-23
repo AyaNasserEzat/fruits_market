@@ -55,6 +55,7 @@ class AppTextStyle {
     fontSize: 21.sp,
     fontFamily: 'TitilliumWeb',
   );
+
   static TextStyle titilliumWebBoldPrimaryColor = TextStyle(
     fontWeight: FontWeight.bold,
     fontSize: 20.sp,
@@ -64,6 +65,12 @@ class AppTextStyle {
   static TextStyle titilliumWebBold24 = TextStyle(
     fontWeight: FontWeight.bold,
     fontSize: 24.sp,
+    fontFamily: 'TitilliumWeb',
+  );
+  static TextStyle titilliumWebBold12 = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 14.sp,
+    color: AppColors.lightGrey2,
     fontFamily: 'TitilliumWeb',
   );
   static TextStyle titilliumWebSemiBold = TextStyle(
