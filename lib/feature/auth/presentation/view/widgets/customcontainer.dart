@@ -9,10 +9,12 @@ class CustomContainer extends StatelessWidget {
     this.color = AppColors.white,
     this.padding = const EdgeInsets.only(left: 16),
     this.height ,
+    this.borderRadius=24
   });
   final Widget child;
   final EdgeInsetsGeometry? padding;
   final double? height;
+  final double? borderRadius;
   final Color? color;
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class CustomContainer extends StatelessWidget {
      // height: height!.h,
       padding: padding,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(28),
+        borderRadius: BorderRadius.circular(borderRadius!),
         color: color,
       boxShadow: [
             BoxShadow(color:Color(0x40000000), blurRadius: 4,offset: Offset(0, 1)),

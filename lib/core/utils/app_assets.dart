@@ -63,4 +63,8 @@ class AppAssets {
 
   static const String confirmedOrderImage =
       'assets/images/order_confirmed_image.svg';
+
+  static const String knetImage = 'assets/images/knet.png';
+  static const String creditCardImage = 'assets/images/credit_card.png';
+  static const String cashImage = 'assets/images/cash.png';
 }

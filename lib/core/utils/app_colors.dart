@@ -14,7 +14,9 @@ class AppColors {
   static const Color blueLight = Color(0xff235C95);
   static Color greyShaded500 = Colors.grey.shade500;
   static const Color lightGrey2 = Color(0xffBEBEBE);
-//656565
+  static const Color greyCheckout = Color(0xff9F9F9F);
+  static const Color addressColor = Color(0xff4A4A4A);
+//4A4A4A
   static const Color redLight = Color(0xffDF958F);
   static const Color greyDark = Color(0xff656565);
   static const Color deliveringStatusBackGroundColor = Color(0xffFFF3C9);
