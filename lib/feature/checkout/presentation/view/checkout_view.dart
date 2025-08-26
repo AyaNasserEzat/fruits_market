@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
+import 'package:fruits_market/core/utils/commans.dart';
 import 'package:fruits_market/core/widgets/app_bar.dart';
 import 'package:fruits_market/core/widgets/custom_button.dart';
+import 'package:fruits_market/feature/checkout/presentation/view/widgets/confirm_order.dart';
 import 'package:fruits_market/feature/checkout/presentation/view/widgets/delivery_address_body.dart';
 import 'package:fruits_market/feature/checkout/presentation/view/widgets/delivery_time_body.dart';
+import 'package:fruits_market/feature/checkout/presentation/view/widgets/erorr_confirm_order.dart';
 import 'package:fruits_market/feature/checkout/presentation/view/widgets/payment_body.dart';
 
 import 'package:fruits_market/feature/checkout/presentation/view/widgets/time_line_checkout.dart';
@@ -43,6 +46,9 @@ class _CheckoutViewState extends State<CheckoutView> {
                       currentStep++;
                     }
                   });
+                  if(currentStep==2){
+                    navigatPush(context, ErorrConfirmOrder());
+                  }
                 },
                 text:currentStep==2?'Place Order': 'Continue',
               ),
