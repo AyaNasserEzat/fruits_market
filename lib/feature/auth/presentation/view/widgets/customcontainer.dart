@@ -19,7 +19,7 @@ class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-     // height: height!.h,
+      height: height,
       padding: padding,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadius!),

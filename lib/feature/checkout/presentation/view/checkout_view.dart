@@ -47,7 +47,7 @@ class _CheckoutViewState extends State<CheckoutView> {
                     }
                   });
                   if(currentStep==2){
-                    navigatPush(context, ErorrConfirmOrder());
+                    navigatPush(context, ConfirmOrder());
                   }
                 },
                 text:currentStep==2?'Place Order': 'Continue',
