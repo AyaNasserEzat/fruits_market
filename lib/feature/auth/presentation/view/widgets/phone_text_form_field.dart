@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:fruits_market/core/utils/app_colors.dart';
 
 class PhoneTextFormField extends StatefulWidget {
-  PhoneTextFormField({super.key,required this.hintText});
+  PhoneTextFormField({super.key,required this.hintText,required this.controller});
   List<String> c = ["KW", "eg"];
   String selectedCode = "KW";
   String? hintText;
+  final TextEditingController? controller;
   @override
   State<PhoneTextFormField> createState() => _PhoneTextFormField();
 }
@@ -43,7 +44,7 @@ class _PhoneTextFormField extends State<PhoneTextFormField> {
 
           Expanded(
             child: TextField(
-              controller: TextEditingController(),
+              controller: widget.controller,
               keyboardType: TextInputType.phone,
               decoration:  InputDecoration(
                 border: InputBorder.none,

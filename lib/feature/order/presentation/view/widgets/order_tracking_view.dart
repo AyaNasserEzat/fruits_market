@@ -66,14 +66,14 @@ class OrderTrackingView extends StatelessWidget {
                                       color: AppColors.dialogTextColor,
                                     ),
                                   ),
-                                  CustomTextFormField(),
+                                  CustomTextFormField(controller: TextEditingController(),),
                                   Text(
                                     "Notes",
                                     style: AppTextStyle.arialRegular18.copyWith(
                                       color: AppColors.dialogTextColor,
                                     ),
                                   ),
-                                  CustomTextFormField(height: 100),
+                                  CustomTextFormField(height: 100, controller: TextEditingController(),),
                                   SizedBox(height: 30),
                                   CustomButton(
                                     onpressed: () {},

@@ -18,15 +18,15 @@ class UpdateProfileForm extends StatelessWidget {
       children: [
         CustomTextRich(text: AppStrings.name),
         SizedBox(height: 17.h),
-    CustomTextFormField(hintText: AppStrings.name),
+    CustomTextFormField(hintText: AppStrings.name,controller: TextEditingController(),),
     SizedBox(height: 10.h),
     CustomTextRich(text: AppStrings.mobileNumberWithWhatspp),
     SizedBox(height: 14.h),
-    PhoneTextFormField(hintText: 'Mobile Number'),
+    PhoneTextFormField(hintText: 'Mobile Number',controller: TextEditingController(),),
     SizedBox(height: 17.h),
     CustomTextRich(text: AppStrings.password),
     SizedBox(height: 14.h),
-    CustomTextFormField(hintText: AppStrings.password),
+    CustomTextFormField(hintText: AppStrings.password,controller: TextEditingController(),),
     SizedBox(height: 40.h),
     CustomButton(onpressed: (){}, text: 'Update')
       ],

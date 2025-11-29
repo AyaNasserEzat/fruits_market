@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruits_market/core/helpers/extension.dart';
+import 'package:fruits_market/core/routing/routes.dart';
 import 'package:fruits_market/core/utils/app_assets.dart';
 import 'package:fruits_market/core/utils/app_strings.dart';
 import 'package:fruits_market/core/utils/app_text_style.dart';
 import 'package:fruits_market/core/widgets/custom_button.dart';
 import 'package:fruits_market/feature/auth/data/models/on_bording_model.dart';
-import 'package:fruits_market/feature/auth/presentation/view/sign_in_option_view.dart';
 import 'package:fruits_market/feature/auth/presentation/view/widgets/custom_indicator.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -27,35 +28,37 @@ class PageViewItem extends StatelessWidget {
           padding: const EdgeInsets.only(right: 30.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
-            children: [Text(AppStrings.skip, style: AppTextStyle.regularStyle)],
+            children: [
+              Text(AppStrings.skip, style: AppTextStyle.regularStyle),
+            ],
           ),
         ),
         Image.asset(AppAssets.appNameImg),
         Text(onBordingModel.title, style: AppTextStyle.poppinsBoldBlack),
         SizedBox(height: 16.h),
         Text(onBordingModel.subTitle, style: AppTextStyle.regularStyle),
-        SizedBox(height: 98.h),
-
+        SizedBox(height: 70.h),
+    
         CustomIndicator(currentIndex: currentIndex),
         SizedBox(height: 98.h),
-      currentIndex!=2?  CustomButton(
-        width: 200.w,
-          onpressed: () {
-            pageController.nextPage(
-              duration: const Duration(milliseconds: 1000),
-              curve: Curves.ease,
-            );
-          },
-          text: 'Next',
-        ):CustomButton(
-          width: 200.w,
-          onpressed: () {
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-              return SignInOptionView();
-            }));
-          },
-          text: 'Get Started',
-        )
+        currentIndex != 2
+            ? CustomButton(
+              width: 200.w,
+              onpressed: () {
+                pageController.nextPage(
+                  duration: const Duration(milliseconds: 1000),
+                  curve: Curves.ease,
+                );
+              },
+              text: 'Next',
+            )
+            : CustomButton(
+              width: 200.w,
+              onpressed: () {
+                context.pushNamed(Routes.loginScreen);
+              },
+              text: 'Get Started',
+            ),
       ],
     );
   }

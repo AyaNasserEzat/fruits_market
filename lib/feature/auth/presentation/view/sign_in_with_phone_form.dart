@@ -18,7 +18,7 @@ class SignInWithPhoneForm extends StatelessWidget {
       children: [
         CustomTextRich(text: 'Phone Number '),
          SizedBox(height: 8.h),
-            PhoneTextFormField(hintText: 'Phone Number'),
+            PhoneTextFormField(hintText: 'Phone Number', controller: TextEditingController(),),
               SizedBox(height: 48.h),
               CustomButton(onpressed: () {
                   Navigator.pushReplacement(
