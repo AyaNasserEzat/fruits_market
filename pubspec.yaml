@@ -43,15 +43,14 @@ dependencies:
   freezed: ^3.1.0
   freezed_annotation: ^3.1.0
   # Automatically generate code for converting to and from JSON by annotating Dart classes
-  json_serializable: ^6.9.5
+  json_serializable: ^6.11.2
   json_annotation: ^4.9.0
- 
-  #A build system for Dart code generation and modular compilation
-  build_runner: ^2.5.4
   # Networking
   dio: ^5.9.0
-  retrofit: ^4.6.0
-  retrofit_generator: ^9.7.0
+  retrofit: ^4.9.1
+  retrofit_generator: ^10.2.0
+  #A build system for Dart code generation and modular compilation
+  build_runner: ^2.10.4
   # for dependency injection
   get_it: ^8.2.0
   # An SVG rendering and widget library for Flutter, which allows painting 
