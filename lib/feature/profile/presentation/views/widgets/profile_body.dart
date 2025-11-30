@@ -11,6 +11,7 @@ import 'package:fruits_market/feature/profile/presentation/views/terms_of_privac
 import 'package:fruits_market/feature/profile/presentation/views/update_profile_view.dart';
 import 'package:fruits_market/feature/profile/presentation/views/widgets/profil_item_list_tile.dart';
 import 'package:fruits_market/feature/profile/presentation/views/widgets/profile_image.dart';
+import 'package:fruits_market/feature/profile/presentation/views/widgets/profile_info.dart';
 
 class ProfileBody extends StatelessWidget {
   const ProfileBody({super.key});
@@ -26,7 +27,7 @@ class ProfileBody extends StatelessWidget {
             SizedBox(height: 25.h),
             ProfileImage(),
             SizedBox(height: 16.h),
-            Text("Welcom, Fruit Market", style: AppTextStyle.arialRegular18.copyWith(fontSize: 24)),
+            ProfileInfo(),
             SizedBox(height: 24.h),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),

@@ -61,7 +61,6 @@ dependencies:
   skeletonizer: ^2.1.0+1
   #for flutter local notifications
   intl: ^0.20.2
-  flutter_local_notifications: ^19.5.0
   timezone: ^0.10.1
   flutter_timezone: ^5.0.1
   # for flutte native splash
