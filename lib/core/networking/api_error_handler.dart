@@ -81,7 +81,7 @@ ApiErrorModel _handelError(dynamic response) {
 
   return ApiErrorModel(
     message: message,
-    status: statusCode,
+    status: data?['status'],
     data: data?['data'],
   );
 }
