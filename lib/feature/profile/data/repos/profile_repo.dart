@@ -3,8 +3,8 @@ import 'package:fruits_market/core/networking/api_result.dart';
 import 'package:fruits_market/feature/profile/data/apis/profile_api_service.dart';
 import 'package:fruits_market/feature/profile/data/models/profile_model.dart';
 
-class PrfileRepo {
-  PrfileRepo(this.profileApiService);
+class ProfileRepo {
+  ProfileRepo(this.profileApiService);
   ProfileApiService profileApiService;
   Future<ApiResult<ProfileModel>> getProfile() async {
     try {
